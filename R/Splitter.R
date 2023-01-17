@@ -1,6 +1,6 @@
 #' Split the dataframe to train and test
 #' @param df A data frame containing medical insurance data.
-#' @importFrom rsample initial_split
+#' @importFrom rsample initial_split training testing
 #' @importFrom hash hash
 #' @export
 #' @return A dataframe of 2 columns train and test
@@ -14,11 +14,13 @@
 
 split_data <- function(df){
 
-  split <- initial_split(data = df, prop = 0.80, strata = charges)
+  set.seed(123)
 
-  train_set <- training(split)
+  split <- rsample::initial_split(data = df, prop = 0.80, strata = charges)
 
-  test_set <- testing(split)
+  train_set <- rsample::training(split)
+
+  test_set <- rsample::testing(split)
 
   h <- hash::hash()
 
