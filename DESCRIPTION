@@ -19,8 +19,8 @@ Imports:
     hash,
     caret,
     rsample,
-    randomForest,
-    ggplot2
-
-
-
+    randomForest
+Suggests: 
+    testthat (>= 3.0.0),
+    readr
+Config/testthat/edition: 3
