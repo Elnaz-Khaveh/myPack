@@ -4,12 +4,12 @@
 \alias{predicted}
 \title{Predict the charges using Random Forest model}
 \usage{
-predicted(df, model = rf)
+predicted(train, test)
 }
 \arguments{
-\item{df}{A data frame containing medical insurance data.}
+\item{train}{The train set after spiliting the insurance data}
 
-\item{model}{The model which is used for prediction}
+\item{test}{The test set after spiliting the insurance data}
 }
 \value{
 A random forets model summary
@@ -18,5 +18,7 @@ A random forets model summary
 Predict the charges using Random Forest model
 }
 \details{
-This function allows the users to find the predicted values for charges using the random forest model
+This function allows the users to find the predicted values for charges using
+the random forest model Note that instead if the arguments of this function
+you can use train(insurance) and test(insurance).
 }

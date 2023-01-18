@@ -4,12 +4,12 @@
 \alias{pred_plot}
 \title{Plot the predicted values vs. the actual values}
 \usage{
-pred_plot(df, model = rf)
+pred_plot(pred, test)
 }
 \arguments{
-\item{df}{A data frame containing medical insurance data.}
+\item{pred}{The predicted values using random forest}
 
-\item{model}{The model that is used to visualize the prediction plot}
+\item{test}{The test set after spiliting the insurance dataset}
 }
 \value{
 A plot
@@ -18,5 +18,8 @@ A plot
 Plot the predicted values vs. the actual values
 }
 \details{
-This function allows the users to plot the actual values vs. the predicted values
+This function allows the users to plot the actual values vs. the predicted
+values. Note that as the first argument you can use
+predicted(train(insurance),test(insurance)), and as the second argument you can use
+test(insurance)
 }

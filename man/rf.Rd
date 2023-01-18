@@ -4,10 +4,10 @@
 \alias{rf}
 \title{Train a random forest model on charges}
 \usage{
-rf(df)
+rf(train)
 }
 \arguments{
-\item{df}{A data frame containing medical insurance data.}
+\item{train}{The train set after spiliting insurance data}
 }
 \value{
 A random forets model summary

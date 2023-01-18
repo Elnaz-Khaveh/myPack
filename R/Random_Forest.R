@@ -1,5 +1,5 @@
 #' Train a random forest model on charges
-#' @param df A data frame containing medical insurance data.
+#' @param train The train set after spiliting insurance data
 #' @importFrom caret trainControl train
 #' @importFrom randomForest randomForest
 #' @export
@@ -11,9 +11,9 @@
 
 
 
-rf <- function(df){
+rf <- function(train){
 
   trainCon <- caret::trainControl(method = "cv", number = 5)
-  model <- caret::train(charges ~., data = split_data(factoring(df))$train_set, method = "rf", trControl = trainCon)
+  model <- caret::train(charges ~., data = train, method = "rf", trControl = trainCon)
   return(model)
 }

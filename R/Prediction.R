@@ -1,17 +1,18 @@
 #' Predict the charges using Random Forest model
-#' @param df A data frame containing medical insurance data.
-#' @param model The model which is used for prediction
+#' @param train The train set after spiliting the insurance data
+#' @param test The test set after spiliting the insurance data
 #' @importFrom caret trainControl train
 #' @export
 #' @return A random forets model summary
 #' @details
-#' This function allows the users to find the predicted values for charges using the random forest model
+#' This function allows the users to find the predicted values for charges using
+#' the random forest model Note that instead if the arguments of this function
+#' you can use train(insurance) and test(insurance).
 
 
 
 
-
-predicted <- function(df,model = rf){
-  predict(model(df), newdata = split_data(factoring(df))$test_set[-7])
+predicted <- function(train,test){
+  predict(rf(train), newdata = test[-7])
 
 }
