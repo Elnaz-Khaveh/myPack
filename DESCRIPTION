@@ -2,8 +2,7 @@ Package: myPack
 Type: Package
 Title: Explanatory Data Analysis, Train Random Forest model
 Version: 0.1.0
-Author: Elnaz Khaveh
-Maintainer: Elnaz Khaveh <elnaz.khaveh@gmail.com>
+Authors@R: person("Elnaz", "Khaveh", email="elnaz.khaveh@gmail.com", role= c("aut", "cre"))
 Description: This package allows users to do some Explanatory Data Analysis with visualizations. Also it
     trains random forest models to predict the charges from the dataset "insurance".
 License: GPL (>=3)
@@ -19,7 +18,8 @@ Imports:
     hash,
     caret,
     rsample,
-    randomForest
+    randomForest,
+    ggplot2
 Suggests: 
     testthat (>= 3.0.0),
     readr

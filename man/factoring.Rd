@@ -20,3 +20,6 @@ This function allows the user to convert all the columns with type character to 
 to be able to use it for prediction, because factors have different levels like numbers, so it
 is somehow like encoding the categorical variables
 }
+\examples{
+factoring(insurance)
+}
