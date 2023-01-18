@@ -4,10 +4,12 @@
 \alias{pred_plot}
 \title{Plot the predicted values vs. the actual values}
 \usage{
-pred_plot(df)
+pred_plot(df, model = rf)
 }
 \arguments{
 \item{df}{A data frame containing medical insurance data.}
+
+\item{model}{The model that is used to visualize the prediction plot}
 }
 \value{
 A plot

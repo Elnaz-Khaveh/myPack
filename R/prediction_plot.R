@@ -1,5 +1,6 @@
 #' Plot the predicted values vs. the actual values
 #' @param df A data frame containing medical insurance data.
+#' @param model The model that is used to visualize the prediction plot
 #' @export
 #' @return A plot
 #' @details
@@ -7,9 +8,9 @@
 
 
 
-pred_plot <- function(df){
+pred_plot <- function(df,model = rf){
 
-  plot(predicted(factoring(df)),
+  plot(predicted(factoring(df),model),
        (split_data(factoring(df))$test_set)$charges,
        xlab = "RF Predicted Values",
        ylab = "Observed Values")

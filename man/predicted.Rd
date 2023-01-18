@@ -4,10 +4,12 @@
 \alias{predicted}
 \title{Predict the charges using Random Forest model}
 \usage{
-predicted(df)
+predicted(df, model = rf)
 }
 \arguments{
 \item{df}{A data frame containing medical insurance data.}
+
+\item{model}{The model which is used for prediction}
 }
 \value{
 A random forets model summary
