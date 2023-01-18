@@ -1,5 +1,5 @@
 #' Plot the scatter plot
-#' @param df A data frame containing medical insurance data.
+#' @param df A data frame containing medical insurance data.(called "insurance")
 #' @param col_of_interest_numeric A numeric column for the x axis, the y axis is the target variable(It must be given with quotes)
 #' @param col_of_interest_factor A data frame containing medical insurance data.(It must be given with quotes)
 #' @importFrom GGally ggcorr
@@ -17,10 +17,10 @@
 scatter_plot <- function(df, col_of_interest_numeric, col_of_interest_factor){
 
   if(!(is.numeric(df[[{{col_of_interest_numeric}}]]))) {
-      stop("The input for the second argument of this function should be numeric")
+      stop("The input for the second argument of this function must be numeric")
     }
   if(is.numeric(df[[{{col_of_interest_factor}}]])) {
-    stop("The input for the third argument of this function should not be numeric")
+    stop("The input for the third argument of this function must not be numeric")
     }
 
     df |>

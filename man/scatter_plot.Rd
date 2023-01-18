@@ -7,7 +7,7 @@
 scatter_plot(df, col_of_interest_numeric, col_of_interest_factor)
 }
 \arguments{
-\item{df}{A data frame containing medical insurance data.}
+\item{df}{A data frame containing medical insurance data.(called "insurance")}
 
 \item{col_of_interest_numeric}{A numeric column for the x axis, the y axis is the target variable(It must be given with quotes)}
 

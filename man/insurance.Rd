@@ -3,9 +3,10 @@
 \docType{data}
 \name{insurance}
 \alias{insurance}
-\title{Medical cost insurance data}
+\title{(Dataset)Medical cost insurance data}
 \format{
 ## `who`
+
 A data frame with 1338 rows and 7 columns:
 \describe{
   \item{age}{age of primary beneficiary}
