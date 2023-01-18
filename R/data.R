@@ -2,8 +2,7 @@
 #'
 #' A tidy dataset of medical cost by the insurance company
 #'
-#' @format ## `who`
-#'
+#' @format
 #' A data frame with 1338 rows and 7 columns:
 #' \describe{
 #'   \item{age}{age of primary beneficiary}
