@@ -17,5 +17,6 @@ This function returns the test set of the dataframe
 }
 \details{
 This function allows the users to get only the test set of the insurance dataframe
-to use in the other functions' arguments
+to use in the other functions' arguments.Since there is another function called "test"
+in the "caret" library so always use myPack::test(df)
 }

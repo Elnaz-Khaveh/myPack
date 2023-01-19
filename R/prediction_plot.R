@@ -1,6 +1,7 @@
 #' Plot the predicted values vs. the actual values
 #' @param pred The predicted values using random forest
 #' @param test The test set after spiliting the insurance dataset
+#' @importFrom ggplot2 ggplot geom_point geom_abline labs
 #' @export
 #' @return A plot
 #' @details
@@ -14,15 +15,15 @@
 
 pred_plot <- function(pred,test){
 
-  plot(pred,
-       test$charges,
-       xlab = "RF Predicted Values",
-       ylab = "Observed Values")
-  abline(a = 0,
-         b = 1,
-         col = "red",
-         lwd = 2)
-
-
+    df <- data.frame(pred,test$charges)
+    ggplot2::ggplot(df, aes(x = pred,y = test.charges)) +
+    ggplot2::geom_point() +
+    ggplot2::geom_abline(intercept = 0,
+                  slope = 1,
+                  color = "red",
+                  linewidth = 1)+
+    ggplot2::labs(x = "RF predicted", y = "Actual")
 
 }
+
+
